@@ -1,8 +1,9 @@
 import React from "react";
 import { ButtonType, ButtonSize, BaseButtonProps } from "./types.ts";
 import classNames from "classnames";
+import "./_style.scss";
 
-//! 泛型参数 BaseButtonProps 用于限制 props
+//! 泛型参数 BaseButtonProps 用于限制传入组件的 props
 const Button: React.FC<BaseButtonProps> = (props) => {
   const { className, disabled, size, btnType, children, href } = props;
 

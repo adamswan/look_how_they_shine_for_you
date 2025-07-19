@@ -1,27 +1,28 @@
-import { Menu, MenuItem, Button } from "./components";
+import { Button } from "./components";
 
 function App() {
   return (
     <>
-      <h1>高圆圆</h1>
-      <Menu defaultIndex={0}>
-        <MenuItem>1</MenuItem>
-        <MenuItem>2</MenuItem>
-        <MenuItem>3</MenuItem>
-      </Menu>
+      <h4>按钮组件</h4>
 
-      <h3>-------</h3>
+      <div>默认类型的默认大小按钮:</div>
+      <Button>按钮0</Button>
 
-      <h3>按钮</h3>
-      <br />
-      <Button>hi</Button>
-      <br />
+      <div>危险类型的默认大小按钮:</div>
+      <Button btnType="danger">按钮1</Button>
+
+      <div>默认类型的大按钮:</div>
       <Button btnType="primary" size="lg">
-        确定
+        按钮2
       </Button>
-      <br />
-      <Button btnType="link" size="sm" href="https://www.baidu.com">
-        前往
+
+      <div>链接按钮:</div>
+      <Button btnType="link" href="https://www.baidu.com">
+        我是链接1
+      </Button>
+
+      <Button btnType="link" href="https://www.baidu.com" disabled>
+        我是链接2
       </Button>
     </>
   );
