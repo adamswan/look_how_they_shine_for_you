@@ -12,7 +12,7 @@ const Button: React.FC<ButtonProps> = (props) => {
   // children, 传入<Button>中的内容（插槽）
   // href, 链接按钮的 href 属性
   // restProps, 剩余的所有属性
-  const { className, btnType, size, disabled, children, href, ...restProps } = props;
+  const { className, btnType = "default", size, disabled = false, children, href, ...restProps } = props;
 
   // 各种类名
   const classes = classNames("btn", className, {
@@ -37,12 +37,6 @@ const Button: React.FC<ButtonProps> = (props) => {
       </button>
     );
   }
-};
-
-// 添加默认属性
-Button.defaultProps = {
-  disabled: false,
-  btnType: ButtonType.Default,
 };
 
 export default Button;

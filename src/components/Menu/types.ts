@@ -10,9 +10,16 @@ export interface MenuProps {
 }
 
 export interface MenuItemProps {
-  index?: string | number;
+  index: number;
   disabled?: boolean;
   style?: React.CSSProperties;
   className?: string;
   children?: React.ReactNode;
+}
+
+type SelectCallback = (selectedIndex: number) => void;
+
+export interface MenuContextProps {
+  index?: number;
+  onSelect?: SelectCallback;
 }
