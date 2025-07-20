@@ -5,12 +5,12 @@ export interface MenuProps {
   className?: string;
   mode?: "horizontal" | "vertical";
   style?: React.CSSProperties;
-  onSelect?: (selectedIndex: string | number) => void;
+  onSelect?: (selectedIndex: number) => void;
   children?: React.ReactNode;
 }
 
 export interface MenuItemProps {
-  index: number;
+  index?: number;
   disabled?: boolean;
   style?: React.CSSProperties;
   className?: string;

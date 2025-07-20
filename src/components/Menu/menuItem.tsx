@@ -17,7 +17,7 @@ const MenuItem: React.FC<MenuItemProps> = (props) => {
 
   const handleClick = () => {
     if (disabled) return; // 如果禁用了，就不做任何操作
-    if (ctx?.onSelect) {
+    if (ctx?.onSelect && typeof index === "number") {
       ctx.onSelect(index); // 调用父组件传递的 onSelect 回调函数
     }
   };
@@ -28,5 +28,8 @@ const MenuItem: React.FC<MenuItemProps> = (props) => {
     </li>
   );
 };
+
+// 给组件添加 displayName 属性，目的是区分不同的组件
+MenuItem.displayName = "MenuItem";
 
 export default MenuItem;
