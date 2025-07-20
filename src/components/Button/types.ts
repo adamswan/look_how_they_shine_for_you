@@ -27,3 +27,10 @@ export interface BaseButtonProps {
   // 链接形按钮的href属性
   href?: string;
 }
+
+// 普通按钮和a链接按钮的原生属性和事件
+type NativeButtonProps = BaseButtonProps & React.ButtonHTMLAttributes<HTMLElement>;
+type AnchorButtonProps = BaseButtonProps & React.AnchorHTMLAttributes<HTMLElement>;
+
+// 用Partial将所有属性都转换为可选，得到按钮组件的最终属性
+export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
